@@ -1,0 +1,56 @@
+services:
+  - type: web
+    name: owa
+    env: docker
+    envVars:
+      - key: OWA_DB_NAME
+        fromService:
+          name: mysql-owa
+          type: pserv
+          envVarKey: MYSQL_DATABASE
+      - key: OWA_DB_HOST
+        fromService:
+          name: mysql-owa
+          type: pserv
+          property: host
+      - key: OWA_DB_USER
+        fromService:
+          name: mysql-owa
+          type: pserv
+          envVarKey: MYSQL_USER
+      - key: OWA_DB_PORT
+        fromService:
+          name: mysql-owa
+          type: pserv
+          property: port
+      - key: OWA_DB_PASSWORD
+        fromService:
+          name: mysql-owa
+          type: pserv
+          envVarKey: MYSQL_PASSWORD
+      - key: OWA_NONCE_KEY
+        generateValue: true
+      - key: OWA_NONCE_SALT
+        generateValue: true
+      - key: OWA_AUTH_KEY
+        generateValue: true
+      - key: OWA_AUTH_SALT
+        generateValue: true
+
+  - type: pserv
+    name: mysql-owa
+    repo: https://github.com/render-examples/mysql.git
+    env: docker
+    disk:
+      name: data
+      mountPath: /var/lib/mysql
+      sizeGB: 20
+    envVars:
+      - key: MYSQL_DATABASE
+        value: owa
+      - key: MYSQL_USER
+        value: owa
+      - key: MYSQL_PASSWORD
+        generateValue: true
+      - key: MYSQL_ROOT_PASSWORD
+        generateValue: true
