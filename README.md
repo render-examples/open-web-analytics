@@ -11,7 +11,7 @@ This repo can be used to deploy [Open Web Analytics] on Render.
 
 Use the button below to deploy Open-Web-Analytics on Render.
 
-[![Deploy to Render](http://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+[![Deploy to Render](http://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/render-examples/open-web-analytics)
 
 ### Manual Deployment
 
