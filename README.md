@@ -2,8 +2,8 @@
 
 This repo can be used to deploy [Open Web Analytics](http://www.openwebanalytics.com/) on Render.
 
-- Uses the official [Open Web Analytics](https://github.com/Open-Web-Analytics/Open-Web-Analytics) installation package with the official [PHP with Apache Docker image](https://hub.docker.com/_/php) as the base runtime.
-- Uses [MySQL on Render](https://render.com/docs/deploy-mysql) for the database.
+- It uses the official [Open Web Analytics](https://github.com/Open-Web-Analytics/Open-Web-Analytics) installation package with the official [PHP with Apache Docker image](https://hub.docker.com/_/php) as the base runtime.
+- It uses [MySQL on Render](https://render.com/docs/deploy-mysql) for the database.
 
 ## Deployment
 
