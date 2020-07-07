@@ -50,6 +50,8 @@ services:
         value: owa
       - key: MYSQL_USER
         value: owa
+      - key: PORT
+        value: 3306
       - key: MYSQL_PASSWORD
         generateValue: true
       - key: MYSQL_ROOT_PASSWORD
