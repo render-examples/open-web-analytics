@@ -18,3 +18,7 @@ Use the button below to deploy Open-Web-Analytics on Render.
 See the guide at https://render.com/docs/deploy-open-web-analytics.
 
 If you need help, chat with us at https://render.com/chat.
+
+## Configuration
+
+By default, Open Web Analytics will use your .onrender.com domain. If you wish to use a custom domain, set the PUBLIC_URL environment variable to your domain with protocol, like `https://www.example.com`.
