@@ -59,7 +59,7 @@ define('OWA_AUTH_SALT', getenv('OWA_AUTH_SALT'));
  * Don't forget the slash at the end.
  */
  
-define('OWA_PUBLIC_URL', getenv('RENDER_EXTERNAL_URL').'/');  
+define('OWA_PUBLIC_URL', (getenv('PUBLIC_URL') ?: getenv('RENDER_EXTERNAL_URL')).'/');
 
 /** 
  * OWA ERROR HANDLER
