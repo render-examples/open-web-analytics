@@ -2,6 +2,7 @@ services:
   - type: web
     name: owa
     env: docker
+    autoDeploy: false
     envVars:
       - key: OWA_DB_NAME
         fromService:
@@ -41,6 +42,7 @@ services:
     name: mysql-owa
     repo: https://github.com/render-examples/mysql.git
     env: docker
+    autoDeploy: false
     disk:
       name: data
       mountPath: /var/lib/mysql
